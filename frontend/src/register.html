@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crear cuenta — Time Management</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Crear cuenta</h1>
+        <p>Regístrate con tu correo corporativo.</p>
+      </header>
+
+      <main class="card" style="max-width:540px;margin:24px auto;">
+        <h2>Crear cuenta</h2>
+        <form id="register-form-el">
+          <label>Nombres completos
+            <input name="fullName" type="text" required />
+          </label>
+          <label>Correo (usuario)
+            <input name="email" type="email" required />
+          </label>
+          <label>Contraseña
+            <input name="password" type="password" required />
+          </label>
+          <p style="font-size:0.85rem;color:#374151;">Dominios permitidos: <span id="allowed-domains">(loading)</span></p>
+          <div style="display:flex;gap:12px;margin-top:12px;">
+            <button type="submit">Crear cuenta</button>
+            <a href="login.html" class="secondary" style="display:inline-flex;align-items:center;padding:8px 12px;text-decoration:none;">Volver a login</a>
+          </div>
+        </form>
+        <p id="status" aria-live="polite"></p>
+      </main>
+    </div>
+    <script src="./auth.js"></script>
+  </body>
+</html>
