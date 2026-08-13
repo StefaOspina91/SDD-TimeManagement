@@ -1,0 +1,4 @@
+{
+  "spec:001:permissions_retention": "{\"permissions\":\"self+managers\",\"retention\":\"1 year\"}",
+  "spec:001:recurrence_policy": "{\"recurrence\":\"both\"}"
+}

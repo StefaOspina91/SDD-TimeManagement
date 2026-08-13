@@ -1,0 +1,10 @@
+# Copilot setup steps (example)
+# Install Node and Yarn
+- node-version: 18.x
+- Install dependencies: `npm ci` in backend and frontend
+
+# Dev services
+- Start local Postgres via docker-compose.dev.yml
+
+# Optional: preinstall global CLIs
+- gh, npm, docker
