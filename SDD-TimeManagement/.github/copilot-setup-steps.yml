@@ -1,0 +1,15 @@
+# Copilot cloud agent setup steps
+# Minimal environment prepared for local dev
+containers:
+  - name: node
+    image: node:18
+    setup:
+      - npm ci
+      - cd backend && npm ci
+      - cd frontend && npm ci
+# Dev start commands
+commands:
+  - name: start-backend
+    run: cd backend && npm run dev
+  - name: start-frontend
+    run: cd frontend && node simple-static-server.js

@@ -1,13 +1,70 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>Time Management - Frontend (Scaffold)</title>
-</head>
-<body>
-  <div id="root">
-    <h1>Time Management — Frontend Scaffold</h1>
-    <p>This is a simple static scaffold. Replace with React app when ready.</p>
-  </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Time Management</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1>Time Management</h1>
+          <p>Track collaborator availability and absences.</p>
+        </div>
+        <span class="badge" id="summary">Loading…</span>
+      </header>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Absence Calendar</h2>
+          <form id="absence-form" class="form-grid" style="margin-bottom:12px;">
+            <label>Title
+              <input name="title" type="text" placeholder="Vacation" />
+            </label>
+            <label>Date
+              <input name="date" type="date" />
+            </label>
+            <label>Start time
+              <input name="startTime" type="time" />
+            </label>
+            <label>End time
+              <input name="endTime" type="time" />
+            </label>
+            <label>Reason
+              <input name="reason" type="text" placeholder="Optional reason" />
+            </label>
+            <label>Recurrence
+              <select name="recurrence">
+                <option value="none">None</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </label>
+            <div style="display:flex;gap:8px;align-items:end;">
+              <button type="submit">Crear ausencia</button>
+              <button type="button" id="reset-form" class="secondary">Reset</button>
+            </div>
+          </form>
+
+          <ul id="absence-list"></ul>
+        </section>
+
+        <aside class="card">
+          <div id="profile-card" style="display:none;">
+            <h2>Perfil</h2>
+            <p id="profile-name">-</p>
+            <div style="display:flex;gap:12px;margin-top:12px;">
+              <button id="logout-button" class="secondary">Cerrar sesión</button>
+            </div>
+          </div>
+
+          <p id="status" aria-live="polite"></p>
+        </aside>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
