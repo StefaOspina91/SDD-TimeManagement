@@ -1,0 +1,14 @@
+{
+  "name": "time-management-backend",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "time-management-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npx http-server ./src -p 3000",
+    "dev": "npx http-server ./src -p 3000",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {}
+}
